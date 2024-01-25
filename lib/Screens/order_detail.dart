@@ -839,7 +839,7 @@ class StateOrder extends State<OrderDetail> with TickerProviderStateMixin {
               ),
               Row(
                 children: [
-                  ClipRRect(
+                  widget.model!.itemList![0].storeImage! == null ? Center(child: CircularProgressIndicator()) :   ClipRRect(
                       borderRadius: BorderRadius.circular(10.0),
                       child: widget.model!.itemList![0].storeImage! == null || widget.model!.itemList![0].storeImage! == "" ? Container() : FadeInImage(
                         fadeInDuration: const Duration(milliseconds: 150),
